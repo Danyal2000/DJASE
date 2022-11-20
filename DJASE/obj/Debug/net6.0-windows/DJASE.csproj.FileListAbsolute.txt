@@ -1,0 +1,17 @@
+C:\Users\masha\source\repos\DJASE\DJASE\obj\Debug\net6.0-windows\DJASE.csproj.AssemblyReference.cache
+C:\Users\masha\source\repos\DJASE\DJASE\obj\Debug\net6.0-windows\DJASE.Form1.resources
+C:\Users\masha\source\repos\DJASE\DJASE\obj\Debug\net6.0-windows\DJASE.csproj.GenerateResource.cache
+C:\Users\masha\source\repos\DJASE\DJASE\obj\Debug\net6.0-windows\DJASE.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\masha\source\repos\DJASE\DJASE\obj\Debug\net6.0-windows\DJASE.AssemblyInfoInputs.cache
+C:\Users\masha\source\repos\DJASE\DJASE\obj\Debug\net6.0-windows\DJASE.AssemblyInfo.cs
+C:\Users\masha\source\repos\DJASE\DJASE\obj\Debug\net6.0-windows\DJASE.csproj.CoreCompileInputs.cache
+C:\Users\masha\source\repos\DJASE\DJASE\bin\Debug\net6.0-windows\DJASE.exe
+C:\Users\masha\source\repos\DJASE\DJASE\bin\Debug\net6.0-windows\DJASE.deps.json
+C:\Users\masha\source\repos\DJASE\DJASE\bin\Debug\net6.0-windows\DJASE.runtimeconfig.json
+C:\Users\masha\source\repos\DJASE\DJASE\bin\Debug\net6.0-windows\DJASE.dll
+C:\Users\masha\source\repos\DJASE\DJASE\bin\Debug\net6.0-windows\DJASE.pdb
+C:\Users\masha\source\repos\DJASE\DJASE\obj\Debug\net6.0-windows\DJASE.dll
+C:\Users\masha\source\repos\DJASE\DJASE\obj\Debug\net6.0-windows\refint\DJASE.dll
+C:\Users\masha\source\repos\DJASE\DJASE\obj\Debug\net6.0-windows\DJASE.pdb
+C:\Users\masha\source\repos\DJASE\DJASE\obj\Debug\net6.0-windows\DJASE.genruntimeconfig.cache
+C:\Users\masha\source\repos\DJASE\DJASE\obj\Debug\net6.0-windows\ref\DJASE.dll
