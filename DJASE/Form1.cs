@@ -24,7 +24,7 @@ namespace DJASE
                 {
                     parse.Parse(ProgramWindow.Text);
                 }
-                //ErrLabel.Text = parse.RetFlag();
+                ErrLabel.Text = parse.RetFlag();
                 Refresh();
             }
         }
