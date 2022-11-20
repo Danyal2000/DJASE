@@ -1,6 +1,6 @@
 ﻿namespace DJASE
 {
-    partial class Form1
+    partial class form1
     {
         /// <summary>
         ///  Required designer variable.
@@ -31,14 +31,16 @@
             this.ProgramWindow = new System.Windows.Forms.RichTextBox();
             this.CommandLine = new System.Windows.Forms.TextBox();
             this.OutputWindow = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.RunBtn = new System.Windows.Forms.Button();
             this.ClearBtn = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.SyntaxBtn = new System.Windows.Forms.Button();
+            this.ErrLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.OutputWindow)).BeginInit();
             this.SuspendLayout();
             // 
             // ProgramWindow
             // 
+            this.ProgramWindow.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ProgramWindow.Location = new System.Drawing.Point(37, 12);
             this.ProgramWindow.Name = "ProgramWindow";
             this.ProgramWindow.Size = new System.Drawing.Size(481, 477);
@@ -56,6 +58,7 @@
             // 
             // OutputWindow
             // 
+            this.OutputWindow.BackColor = System.Drawing.Color.White;
             this.OutputWindow.Location = new System.Drawing.Point(690, 10);
             this.OutputWindow.Name = "OutputWindow";
             this.OutputWindow.Size = new System.Drawing.Size(481, 477);
@@ -63,18 +66,18 @@
             this.OutputWindow.TabStop = false;
             this.OutputWindow.Paint += new System.Windows.Forms.PaintEventHandler(this.OutputWindow_paint);
             // 
-            // button1
+            // RunBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.Lime;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(710, 524);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 50);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Run";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.RunBtn_Click);
+            this.RunBtn.BackColor = System.Drawing.Color.Lime;
+            this.RunBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.RunBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.RunBtn.Location = new System.Drawing.Point(710, 524);
+            this.RunBtn.Name = "RunBtn";
+            this.RunBtn.Size = new System.Drawing.Size(103, 50);
+            this.RunBtn.TabIndex = 7;
+            this.RunBtn.Text = "Run";
+            this.RunBtn.UseVisualStyleBackColor = false;
+            this.RunBtn.Click += new System.EventHandler(this.RunBtn_Click);
             // 
             // ClearBtn
             // 
@@ -89,32 +92,43 @@
             this.ClearBtn.UseVisualStyleBackColor = false;
             this.ClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
             // 
-            // button3
+            // SyntaxBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(1027, 524);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(103, 50);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Syntax";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.SyntaxBtn_Click);
+            this.SyntaxBtn.BackColor = System.Drawing.Color.Red;
+            this.SyntaxBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.SyntaxBtn.Location = new System.Drawing.Point(1027, 524);
+            this.SyntaxBtn.Name = "SyntaxBtn";
+            this.SyntaxBtn.Size = new System.Drawing.Size(103, 50);
+            this.SyntaxBtn.TabIndex = 9;
+            this.SyntaxBtn.Text = "Syntax";
+            this.SyntaxBtn.UseVisualStyleBackColor = false;
+            this.SyntaxBtn.Click += new System.EventHandler(this.SyntaxBtn_Click);
             // 
-            // Form1
+            // ErrLabel
+            // 
+            this.ErrLabel.AutoSize = true;
+            this.ErrLabel.BackColor = System.Drawing.Color.White;
+            this.ErrLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ErrLabel.Location = new System.Drawing.Point(699, 24);
+            this.ErrLabel.Name = "ErrLabel";
+            this.ErrLabel.Size = new System.Drawing.Size(0, 26);
+            this.ErrLabel.TabIndex = 10;
+            // 
+            // form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1212, 650);
-            this.Controls.Add(this.button3);
+            this.ClientSize = new System.Drawing.Size(1245, 619);
+            this.Controls.Add(this.ErrLabel);
+            this.Controls.Add(this.SyntaxBtn);
             this.Controls.Add(this.ClearBtn);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.RunBtn);
             this.Controls.Add(this.OutputWindow);
             this.Controls.Add(this.CommandLine);
             this.Controls.Add(this.ProgramWindow);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "form1";
+            this.Text = "Simple Programming";
             ((System.ComponentModel.ISupportInitialize)(this.OutputWindow)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -126,8 +140,9 @@
         private RichTextBox ProgramWindow;
         private TextBox CommandLine;
         private PictureBox OutputWindow;
-        private Button button1;
+        private Button RunBtn;
         private Button ClearBtn;
-        private Button button3;
+        private Button SyntaxBtn;
+        private Label ErrLabel;
     }
 }

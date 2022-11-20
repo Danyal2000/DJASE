@@ -1,22 +1,33 @@
 namespace DJASE
 {
-    public partial class Form1 : Form
+    public partial class form1 : Form
     {
         private const int x = 640;
         private const int y = 480;
         private Bitmap OutputBitmap = new Bitmap(x, y);
         private Canvass MyCanvas;
 
-        public Form1()
+        public form1()
         {
             InitializeComponent();
             MyCanvas = new Canvass(Graphics.FromImage(OutputBitmap));
 
         }
         private void CommandLine_Enter(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
             {
-
+                string command = CommandLine.Text;
+                Parser parse = new Parser(MyCanvas); // handling the parser class the canvas needed to draw on the screen
+                parse.Parse(command);
+                if (command.Equals("run"))
+                {
+                    parse.Parse(ProgramWindow.Text);
+                }
+                //ErrLabel.Text = parse.RetFlag();
+                Refresh();
             }
+        }
 
             private void RunBtn_Click(object sender, EventArgs e)
             {
