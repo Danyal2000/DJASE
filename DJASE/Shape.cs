@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace DJASE
 {
-    abstract class Shape : IShapes
+    internal class Shape
     {
-
-        public abstract void Draw(Graphics g, Pen pen, int xPos, int yPos);
-        public abstract void Fill(Graphics g, Pen pen, Brush brush, int xPos, int yPos);
     }
 }
