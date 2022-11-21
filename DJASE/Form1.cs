@@ -24,9 +24,9 @@ namespace DJASE
                 parse.Parse(command);
                 if (command.Equals("run"))
                 {
-                    parse.Parse(ProgramWindow.Text);
+                    ErrLabel.Text = parse.Parse(ProgramWindow.Text);
                 }
-                ErrLabel.Text = parse.RetFlag();
+                
                 Refresh();
             }
         }
@@ -35,8 +35,7 @@ namespace DJASE
         {
             string command = ProgramWindow.Text;
             Parser parse = new(MyCanvas);
-            parse.Parse(command);
-            ErrLabel.Text = parse.RetFlag();
+            ErrLabel.Text = parse.Parse(command);
             Refresh();
         }
 
@@ -92,7 +91,6 @@ namespace DJASE
             {
                 StreamReader reader = new(File.OpenRead(load.FileName));
                 ProgramWindow.Text= reader.ReadToEnd();
-                ProgramWindow.Clear();
                 reader.Dispose();
             }
         }

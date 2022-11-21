@@ -17,18 +17,11 @@ namespace DJASE
             this.c = MyCanvas;
 
         }
-        public void Parse(string command)
+        public string Parse(string command)
         {
-
-
-            Commands C1 = new();
             string[] ar = Commands.Inputarr(command);
             int ln = ar.Length;
             string[] err = new string[ar.Length];
-
-
-
-
 
             for (int i = 0; i < ln; i++)
             {
@@ -242,11 +235,6 @@ namespace DJASE
             }
 
             err1 = string.Join("\n", err);
-        }
-
-
-        public string RetFlag()
-        {
             return err1;
         }
 
