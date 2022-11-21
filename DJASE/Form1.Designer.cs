@@ -1,6 +1,6 @@
 ﻿namespace DJASE
 {
-    partial class form1
+    partial class Form1
     {
         /// <summary>
         ///  Required designer variable.
@@ -40,7 +40,7 @@
             // 
             // ProgramWindow
             // 
-            this.ProgramWindow.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ProgramWindow.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ProgramWindow.Location = new System.Drawing.Point(37, 12);
             this.ProgramWindow.Name = "ProgramWindow";
             this.ProgramWindow.Size = new System.Drawing.Size(481, 477);
@@ -49,10 +49,10 @@
             // 
             // CommandLine
             // 
-            this.CommandLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CommandLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CommandLine.Location = new System.Drawing.Point(37, 538);
             this.CommandLine.Name = "CommandLine";
-            this.CommandLine.Size = new System.Drawing.Size(481, 32);
+            this.CommandLine.Size = new System.Drawing.Size(481, 26);
             this.CommandLine.TabIndex = 5;
             this.CommandLine.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CommandLine_Enter);
             // 
@@ -108,13 +108,13 @@
             // 
             this.ErrLabel.AutoSize = true;
             this.ErrLabel.BackColor = System.Drawing.Color.White;
-            this.ErrLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ErrLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ErrLabel.Location = new System.Drawing.Point(699, 24);
             this.ErrLabel.Name = "ErrLabel";
-            this.ErrLabel.Size = new System.Drawing.Size(0, 26);
+            this.ErrLabel.Size = new System.Drawing.Size(0, 16);
             this.ErrLabel.TabIndex = 10;
             // 
-            // form1
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -127,7 +127,7 @@
             this.Controls.Add(this.OutputWindow);
             this.Controls.Add(this.CommandLine);
             this.Controls.Add(this.ProgramWindow);
-            this.Name = "form1";
+            this.Name = "Form1";
             this.Text = "Simple Programming";
             ((System.ComponentModel.ISupportInitialize)(this.OutputWindow)).EndInit();
             this.ResumeLayout(false);

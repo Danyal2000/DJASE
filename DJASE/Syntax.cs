@@ -6,25 +6,18 @@ using System.Threading.Tasks;
 
 namespace DJASE
 {
-    public class Parser
+    public class Syntax
     {
-        readonly Canvass c;
-        string err1="";
-        
+        public string err1 = "";
 
-        public Parser(Canvass MyCanvas)
+        public string SynCheck(string command)
         {
-            this.c = MyCanvas;
-
-        }
-        public void Parse(string command)
-        {
-
-
             Commands C1 = new();
             string[] ar = Commands.Inputarr(command);
             int ln = ar.Length;
             string[] err = new string[ar.Length];
+
+
 
 
 
@@ -62,7 +55,7 @@ namespace DJASE
                                 throw new IndexOutOfRangeException();
                             }
 
-                            c.ChangeColor(col);
+
 
                         }
                         else if (s1.Length < 2)
@@ -70,6 +63,7 @@ namespace DJASE
                             throw new IndexOutOfRangeException();
                         }
                     }
+
                     else if (s1[0].Equals("rect") == true)
                     {
 
@@ -87,7 +81,7 @@ namespace DJASE
                         {
                             int w = Convert.ToInt32(s2[0]);
                             int h = Convert.ToInt32(s2[1]);
-                            c.DrawRec(w, h);
+
 
                         }
                     }
@@ -102,8 +96,6 @@ namespace DJASE
                         else
                         {
                             int w = Convert.ToInt32(s1[1]);
-
-                            c.DrawCirc(w);
 
                         }
                     }
@@ -120,7 +112,7 @@ namespace DJASE
                         {
                             int h = Convert.ToInt32(s1[1]);
 
-                            c.DrawTri(h);
+
 
                         }
                     }
@@ -140,7 +132,7 @@ namespace DJASE
                         {
                             int x = Convert.ToInt32(s2[0]);
                             int y = Convert.ToInt32(s2[1]);
-                            c.MoveTo(x, y);
+
                         }
                     }
                     else if (s1[0].Equals("drawto") == true)
@@ -159,7 +151,7 @@ namespace DJASE
                         {
                             int x = Convert.ToInt32(s2[0]);
                             int y = Convert.ToInt32(s2[1]);
-                            c.DrawTo(x, y);
+
                         }
                     }
                     else if (s1[0].Equals("clear") == true)
@@ -170,7 +162,7 @@ namespace DJASE
                         }
                         else
                         {
-                            c.ClearPanel();
+
                         }
                     }
                     else if (s1[0].Equals("run") == true)
@@ -179,6 +171,7 @@ namespace DJASE
                         {
                             throw new InvalidOperationException();
                         }
+
                     }
                     else if (s1[0].Equals("reset") == true)
                     {
@@ -188,7 +181,7 @@ namespace DJASE
                         }
                         else
                         {
-                            c.ResetPanel();
+
                         }
 
                     }
@@ -211,7 +204,7 @@ namespace DJASE
                             }
                             else
                             {
-                                c.Fill(s1[1]);
+
                             }
                         }
                     }
@@ -238,16 +231,26 @@ namespace DJASE
                 {
                     err[i] = "Unknown command on line" + " " + (i + 1);
                 }
+               
+            }
+           
+            if (err != null && err.All(s => string.IsNullOrEmpty(s)))
+            {
+                err1 = "Syntax check completed succesfully";
+                return err1;
 
             }
+            else if(err!=null) 
+            {
+                err1 = string.Join("\n", err);
+                return err1;
 
-            err1 = string.Join("\n", err);
-        }
+            }
+            else
+            {
+                return err1;
+            }
 
-
-        public string RetFlag()
-        {
-            return err1;
         }
 
     }

@@ -44,6 +44,7 @@ namespace DJASE
             point[1].Y = yPos;
             point[2].X = (int)xPos + (height / 2);
             point[2].Y = yPos;
+
             g.FillPolygon(brush,point);
         }
     }

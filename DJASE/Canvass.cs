@@ -6,15 +6,13 @@ using System.Threading.Tasks;
 
 namespace DJASE
 {
-public class Canvass
+    public class Canvass
     {
         private readonly Graphics g;
         int xPos=0,yPos=0;
-        public Pen pen = new Pen(Color.Black);
-        public SolidBrush SolidBrush = new SolidBrush(Color.Black);
+        public Pen pen = new(Color.Black);
+        public SolidBrush SolidBrush = new(Color.Black);
         private bool fill = false;
-
-       
 
 
         public Canvass(Graphics g)
@@ -37,7 +35,7 @@ public class Canvass
 
         public void DrawTo(int x,int y)
         {
-            Line L1 = new Line();
+            Line L1 = new();
             L1.SetXY(x,y);
             if (fill == false)
             {
@@ -106,7 +104,7 @@ public class Canvass
         }
         public void DrawRec(int h, int w)
         {
-            Rectangle R1 = new Rectangle();
+            Rectangle R1 = new();
             R1.SetHeightWidth(h,w);
             if (fill == false)
             {
@@ -120,7 +118,7 @@ public class Canvass
         }
         public void DrawTri(int h)
         {
-           Triangle T1 = new Triangle();
+           Triangle T1 = new();
             
             T1.SetHeight(h);
             if(fill == false)
@@ -136,7 +134,7 @@ public class Canvass
 
         public void DrawCirc(int w)
         {
-            Circle C1 = new Circle();
+            Circle C1 = new();
             C1.SetWidth(w);
             if(fill == false)
             {
@@ -167,8 +165,5 @@ public class Canvass
             xPos = 0;
             yPos = 0;
         }
-
-    
-
     }
 }

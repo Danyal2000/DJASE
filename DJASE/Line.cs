@@ -22,16 +22,16 @@ namespace DJASE
 
         public override void Draw(Graphics g, Pen pen, int xPos, int yPos)
         {
-            PointF point1 = new PointF(x, y);
-            PointF point2 = new PointF(xPos, yPos);
+            PointF point1 = new(x, y);
+            PointF point2 = new(xPos, yPos);
             g.DrawLine(pen, point1, point2);
         }
 
         public override void Fill(Graphics g, Pen pen, Brush brush, int xPos, int yPos)
         {
 
-            PointF point1 = new PointF(x, y);
-            PointF point2 = new PointF(xPos, yPos);
+            PointF point1 = new(x, y);
+            PointF point2 = new(xPos, yPos);
             g.DrawLine(pen, point1, point2);
         }
     }

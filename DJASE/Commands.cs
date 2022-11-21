@@ -8,7 +8,7 @@ namespace DJASE
 {
     public class Commands
     {
-        public string[] inputarr(string input)
+        public static string[] Inputarr(string input)
         {
             string str = input.ToLower().Trim();
 
