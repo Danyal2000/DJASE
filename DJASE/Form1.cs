@@ -31,14 +31,14 @@ namespace DJASE
             }
         }
 
-            private void RunBtn_Click(object sender, EventArgs e)
-            {
-                  string command = ProgramWindow.Text;
-                  Parser parse = new(MyCanvas);
-                  parse.Parse(command);
-                  ErrLabel.Text = parse.RetFlag();
-                  Refresh();
-            }
+        private void RunBtn_Click(object sender, EventArgs e)
+        {
+            string command = ProgramWindow.Text;
+            Parser parse = new(MyCanvas);
+            parse.Parse(command);
+            ErrLabel.Text = parse.RetFlag();
+            Refresh();
+        }
 
         private void OutputWindow_paint(object sender, PaintEventArgs e)
         {
@@ -53,7 +53,7 @@ namespace DJASE
             Refresh();
         }
 
-        private void SyntaxBtn_Click(object sender, EventArgs e)
+    private void SyntaxBtn_Click(object sender, EventArgs e)
         {
             Syntax syn = new();
 
@@ -64,5 +64,37 @@ namespace DJASE
             Refresh();
         }
 
+        private void SaveBtn_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog store = new()
+            {
+                Title = "Save program",
+                Filter = "Text file (*.txt)|*.txt"
+            };
+            if (store.ShowDialog() == DialogResult.OK)
+            {
+                StreamWriter writer = new(File.Create(store.FileName));
+                writer.Write(ProgramWindow.Text);
+                ProgramWindow.Clear();
+                writer.Dispose();
+            }
+        }
+
+        private void LoadBtn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog load = new()
+            {
+                Title = "Load program",
+                Filter = "Text file(*.txt)|*.txt"
+            };
+
+            if(load.ShowDialog() == DialogResult.OK)
+            {
+                StreamReader reader = new(File.OpenRead(load.FileName));
+                ProgramWindow.Text= reader.ReadToEnd();
+                ProgramWindow.Clear();
+                reader.Dispose();
+            }
+        }
     }
 }

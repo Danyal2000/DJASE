@@ -35,6 +35,8 @@
             this.ClearBtn = new System.Windows.Forms.Button();
             this.SyntaxBtn = new System.Windows.Forms.Button();
             this.ErrLabel = new System.Windows.Forms.Label();
+            this.SaveBtn = new System.Windows.Forms.Button();
+            this.LoadBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.OutputWindow)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,7 +73,7 @@
             this.RunBtn.BackColor = System.Drawing.Color.Lime;
             this.RunBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.RunBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.RunBtn.Location = new System.Drawing.Point(710, 524);
+            this.RunBtn.Location = new System.Drawing.Point(669, 524);
             this.RunBtn.Name = "RunBtn";
             this.RunBtn.Size = new System.Drawing.Size(103, 50);
             this.RunBtn.TabIndex = 7;
@@ -84,7 +86,7 @@
             this.ClearBtn.BackColor = System.Drawing.Color.Crimson;
             this.ClearBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClearBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ClearBtn.Location = new System.Drawing.Point(867, 524);
+            this.ClearBtn.Location = new System.Drawing.Point(775, 524);
             this.ClearBtn.Name = "ClearBtn";
             this.ClearBtn.Size = new System.Drawing.Size(103, 50);
             this.ClearBtn.TabIndex = 8;
@@ -96,7 +98,7 @@
             // 
             this.SyntaxBtn.BackColor = System.Drawing.Color.Red;
             this.SyntaxBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.SyntaxBtn.Location = new System.Drawing.Point(1027, 524);
+            this.SyntaxBtn.Location = new System.Drawing.Point(883, 524);
             this.SyntaxBtn.Name = "SyntaxBtn";
             this.SyntaxBtn.Size = new System.Drawing.Size(103, 50);
             this.SyntaxBtn.TabIndex = 9;
@@ -114,12 +116,38 @@
             this.ErrLabel.Size = new System.Drawing.Size(0, 16);
             this.ErrLabel.TabIndex = 10;
             // 
+            // SaveBtn
+            // 
+            this.SaveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.SaveBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.SaveBtn.Location = new System.Drawing.Point(989, 524);
+            this.SaveBtn.Name = "SaveBtn";
+            this.SaveBtn.Size = new System.Drawing.Size(103, 50);
+            this.SaveBtn.TabIndex = 11;
+            this.SaveBtn.Text = "Save";
+            this.SaveBtn.UseVisualStyleBackColor = false;
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
+            // 
+            // LoadBtn
+            // 
+            this.LoadBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.LoadBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LoadBtn.Location = new System.Drawing.Point(1098, 524);
+            this.LoadBtn.Name = "LoadBtn";
+            this.LoadBtn.Size = new System.Drawing.Size(103, 50);
+            this.LoadBtn.TabIndex = 12;
+            this.LoadBtn.Text = "Load";
+            this.LoadBtn.UseVisualStyleBackColor = false;
+            this.LoadBtn.Click += new System.EventHandler(this.LoadBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1245, 619);
+            this.Controls.Add(this.LoadBtn);
+            this.Controls.Add(this.SaveBtn);
             this.Controls.Add(this.ErrLabel);
             this.Controls.Add(this.SyntaxBtn);
             this.Controls.Add(this.ClearBtn);
@@ -144,5 +172,7 @@
         private Button ClearBtn;
         private Button SyntaxBtn;
         private Label ErrLabel;
+        private Button SaveBtn;
+        private Button LoadBtn;
     }
 }
